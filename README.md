@@ -1,5 +1,5 @@
-# Op-es-Pro-Evolution-Soccer-1-psx-v_BETA
-# Pro Evolution Soccer 1 PSX Editor v_BETA
+# Opções-Pro-Evolution-Soccer-1-psx-v_BETA
+
 **Desenvolvido por Fabio FJA | C++ | Windows | PlayStation 1**
 
 Ferramenta de edição e personalização do Pro Evolution Soccer 1 (PES 1) para PlayStation 1, desenvolvida em C++ utilizando a API Win32.
