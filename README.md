@@ -46,7 +46,7 @@ O programa permite modificar parâmetros internos do jogo diretamente em arquivo
 Desenvolvido para a versão europeia do Pro Evolution Soccer 1 de PlayStation 1, identificada pelo código **SLES-03795**.
 
 ### Informações adicionais
-Projeto experimental desenvolvido por Fabio FJA em 2016, com finalidade de estudo, pesquisa e modificação de jogos clássicos de PlayStation 1.
+Projeto experimental desenvolvido por Fabio FJA no ano de 2016, com finalidade de estudo, pesquisa e modificação de jogos clássicos de PlayStation 1.
 
 **Status:** versão BETA. Algumas funcionalidades podem apresentar limitações. Recomenda-se fazer backup do arquivo BIN original antes de realizar modificações.
 
