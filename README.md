@@ -52,4 +52,4 @@ Projeto experimental desenvolvido por Fabio FJA no ano de 2016, com finalidade d
 
 Projeto independente, sem vínculo oficial com a Konami.
 
-Para abrir o codigo fonte recomendo codeblocks-13.12mingw-setup-TDM-GCC-481
+Para abrir o codigo fonte recomendo usar IDE: codeblocks-13.12mingw-setup-TDM-GCC-481
