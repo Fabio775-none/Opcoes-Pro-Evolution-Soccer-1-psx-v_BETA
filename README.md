@@ -51,3 +51,5 @@ Projeto experimental desenvolvido por Fabio FJA em 2016, com finalidade de estud
 **Status:** versão BETA. Algumas funcionalidades podem apresentar limitações. Recomenda-se fazer backup do arquivo BIN original antes de realizar modificações.
 
 Projeto independente, sem vínculo oficial com a Konami.
+
+Para abrir o codigo fonte recomendo codeblocks-13.12mingw-setup-TDM-GCC-481
