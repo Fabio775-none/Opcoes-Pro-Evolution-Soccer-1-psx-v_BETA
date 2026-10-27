@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1558204321 source:c:\users\junior\desktop\we2002 tool c++ - copia\main.cpp
+	<windows.h>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<tchar.h>
+
+1562435980 source:c:\users\junior\desktop\pes 1 editor  v_beta by fja\main.cpp
+	<windows.h>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<tchar.h>
+
+1583165045 source:f:\pc\jogos\we 2002\meus codigos fontes\c++ 2019\opções pes 1  v_beta by fja\main.cpp
+	<windows.h>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<tchar.h>
+
+1707665235 source:c:\users\fabio\onedrive\Área de trabalho\opções pes 1  v_beta by fja\main.cpp
+	<windows.h>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<tchar.h>
+
+1707666006 source:c:\users\fabio\onedrive\Área de trabalho\opções pes 1  v_beta by fabio fja\opções pro evolution soccer 1 psx  v_beta by fabio fja\main.cpp
+	<windows.h>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<tchar.h>
+
+1707667352 source:c:\users\fabio\onedrive\Área de trabalho\source code opções pes 1 psx by fja\opções pro evolution soccer 1 psx  v_beta by fabio fja\main.cpp
+	<windows.h>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<tchar.h>
+
