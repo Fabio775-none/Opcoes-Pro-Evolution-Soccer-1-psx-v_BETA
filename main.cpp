@@ -1,7 +1,7 @@
 /*
 Desenvolvido por:
 
-Programado pro Fabio FJA, para fins de estudo e pesquisa em C/C++.
+Programado pro Fabio FJA, para fins de estudo e pesquisa em C++.
 Codigo escrito em  C++ WIN32 API, IDE CodeBlocks 13.12
 Edita o jogo Pro Evolution Soccer 1 psx
 Compilador: GNU GCC Collection
@@ -17,17 +17,17 @@ Ano:2016
 #include <tchar.h>
 
 
-#define BUTTON1	101			// Identificador do bot„o
-#define BUTTON2	102			// Identificador do bot„o
-#define BUTTON3	103			// Identificador do bot„o
-#define BUTTON4	104			// Identificador do bot„o
-#define BUTTON5	105			// Identificador do bot„o
-#define BUTTON6	106			// Identificador do bot„o
-#define BUTTON7	107			// Identificador do bot„o
-#define BUTTON8	108			// Identificador do bot„o
-#define BUTTON9	109			// Identificador do bot„o
-#define BUTTON10	110	    // Identificador do bot„o
-#define BUTTON11	115	    // Identificador do bot„o
+#define BUTTON1	101			// Identificador do bot√£o
+#define BUTTON2	102			// Identificador do bot√£o
+#define BUTTON3	103			// Identificador do bot√£o
+#define BUTTON4	104			// Identificador do bot√£o
+#define BUTTON5	105			// Identificador do bot√£o
+#define BUTTON6	106			// Identificador do bot√£o
+#define BUTTON7	107			// Identificador do bot√£o
+#define BUTTON8	108			// Identificador do bot√£o
+#define BUTTON9	109			// Identificador do bot√£o
+#define BUTTON10	110	    // Identificador do bot√£o
+#define BUTTON11	115	    // Identificador do bot√£o
 
 #define IDC_MAIN_EDIT	111 // TextBox
 #define txtbox 2
@@ -72,7 +72,7 @@ using namespace std;
 
 char szFileName[MAX_PATH] = "";
 
-HGDIOBJ hfDefault=GetStockObject(DEFAULT_GUI_FONT);//declaraÁao de fonte vale pra todos os buttons
+HGDIOBJ hfDefault=GetStockObject(DEFAULT_GUI_FONT);//declara√ßao de fonte vale pra todos os buttons
 
 
 LRESULT CALLBACK WinProc(HWND hWnd,UINT message,WPARAM wParam,LPARAM lParam);
@@ -106,7 +106,7 @@ int WINAPI WinMain(HINSTANCE hInst,HINSTANCE hPrevInst,LPSTR lpCmdLine,int nShow
 
 	HWND hWnd=CreateWindowEx(NULL,
 			"Window Class",
-			"OpÁıes PES 1 v_BETA by fja" ,
+			"Op√ß√µes PES 1 v_BETA by fja" ,
 			WS_OVERLAPPEDWINDOW,
 			200,
 			100,
@@ -188,7 +188,7 @@ void  writeBox(int offset1,int valor1,int offset2,int valor2)
 //################################################################################################################
 void  desabilitado()
 {
-   MessageBox(NULL, "N„o esta habilitado","PES 1 EDITOR", MB_OK | MB_ICONEXCLAMATION | MB_TOPMOST  );
+   MessageBox(NULL, "N√£o esta habilitado","PES 1 EDITOR", MB_OK | MB_ICONEXCLAMATION | MB_TOPMOST  );
 }
 
 void AlterarEstadoBotoes(HWND hWnd, const int* IDsBotoes, int numeroDeBotoes, bool habilitar) {
@@ -197,11 +197,11 @@ void AlterarEstadoBotoes(HWND hWnd, const int* IDsBotoes, int numeroDeBotoes, bo
     }
 }
 
-// Array com os IDs dos botıes a serem habilitados/desabilitados
+// Array com os IDs dos bot√µes a serem habilitados/desabilitados
 const int botoesParaAlterar[] = { BUTTON2, BUTTON3, BUTTON4, BUTTON5, BUTTON6, BUTTON7, BUTTON8, BUTTON9, BUTTON10,
                                   btn11, btn20, btn21, btn22, btn23, btn24, btn25, btn26, btn27, btn28,
                                   btn29, btn30, btn31, btn32, btn33, btn34, btn35, btn36, btn37, comb1 };
-// N˙mero total de botıes no array
+// N√∫mero total de bot√µes no array
 const int numeroDeBotoesParaAlterar = sizeof(botoesParaAlterar) / sizeof(botoesParaAlterar[0]);
 
 
@@ -235,7 +235,7 @@ LRESULT CALLBACK WinProc(HWND hWnd,UINT msg,WPARAM wParam,LPARAM lParam )
 				(HMENU)IDC_MAIN_EDIT,
 				GetModuleHandle(NULL),
 				NULL);
-               // hfDefault=GetStockObject(DEFAULT_GUI_FONT);//declaraÁao de fonte vale pra todos os buttons
+               // hfDefault=GetStockObject(DEFAULT_GUI_FONT);//declara√ßao de fonte vale pra todos os buttons
 			SendMessage(hEdit,
 				WM_SETFONT,
 				(WPARAM)hfDefault,
@@ -245,10 +245,10 @@ LRESULT CALLBACK WinProc(HWND hWnd,UINT msg,WPARAM wParam,LPARAM lParam )
 				NULL,
 				(LPARAM)"Offsets >>>    Iori8421 - Tepman - Polipoli - Fabio FJA ");//detectando o filename
 
-// objetos sem indentanÁ„o para ser mais r·pido de programar e f·cil compreens„o
+// objetos sem indentan√ß√£o para ser mais r√°pido de programar e f√°cil compreens√£o
 HWND label1 = CreateWindowEx(NULL,"STATIC","Velocidade :" ,WS_CHILD|WS_VISIBLE,20,100,150,20,hWnd,(HMENU)lb11,0,0);//Cria label
-HWND label2 = CreateWindowEx(NULL,"STATIC","Master liga dinheiro / contrataÁıes :" ,WS_CHILD|WS_VISIBLE,200,100,400,50,hWnd,(HMENU)lb12,0,0);//Cria label
-//HWND label3 = CreateWindowEx(NULL,"STATIC","Master liga contrataÁoes :" ,WS_CHILD|WS_VISIBLE,387,100,450,50,hWnd,(HMENU)lb13,0,0);//Cria label
+HWND label2 = CreateWindowEx(NULL,"STATIC","Master liga dinheiro / contrata√ß√µes :" ,WS_CHILD|WS_VISIBLE,200,100,400,50,hWnd,(HMENU)lb12,0,0);//Cria label
+//HWND label3 = CreateWindowEx(NULL,"STATIC","Master liga contrata√ßoes :" ,WS_CHILD|WS_VISIBLE,387,100,450,50,hWnd,(HMENU)lb13,0,0);//Cria label
 
 HWND label4 = CreateWindowEx(NULL,"STATIC","Copa :" ,WS_CHILD|WS_VISIBLE,20, 269,150, 20,hWnd,(HMENU)lb14,0,0);//Cria label
 HWND label5 = CreateWindowEx(NULL,"STATIC","" ,WS_CHILD|WS_VISIBLE,20, 299,150, 20,hWnd,(HMENU)lb15,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(label5,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria label
@@ -266,33 +266,33 @@ HWND label12 = CreateWindowEx(NULL,"STATIC","Dificuldade" ,WS_CHILD|WS_VISIBLE,4
 HWND bot11 = CreateWindowEx(0,"BUTTON","Destravar o menu copas" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,21, 315,150,93,hWnd,(HMENU)btn11,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot11,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));
 //HWND bot12 = CreateWindowEx(0,"BUTTON","10" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,21, 315,150,93,hWnd,(HMENU)btn12,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot12,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));
 //HWND bot13 = CreateWindowEx(0,"BUTTON","15" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,21, 381,30, 27,hWnd,(HMENU)btn13,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot13,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));
-//HWND bot14 = CreateWindowEx(0,"BUTTON","20" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,57, 315,31, 27,hWnd,(HMENU)btn14,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot14,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-//HWND bot15 = CreateWindowEx(0,"BUTTON","25" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,57, 348,31, 27,hWnd,(HMENU)btn15,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot15,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot„o
-//HWND bot16 = CreateWindowEx(0,"BUTTON","30" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,57, 381,31, 27,hWnd,(HMENU)btn16,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot16,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-//HWND bot17 = CreateWindowEx(0,"BUTTON","Facil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,101, 315,70, 27,hWnd,(HMENU)btn17,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot17,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-//HWND bot18 = CreateWindowEx(0,"BUTTON","Normal" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,101, 348,70, 27,hWnd,(HMENU)btn18,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot18,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot„o
-//HWND bot19 = CreateWindowEx(0,"BUTTON","Dificil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,101, 381,70, 27,hWnd,(HMENU)btn19,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot19,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot20 = CreateWindowEx(0,"BUTTON","5" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,203, 315,31, 27,hWnd,(HMENU)btn20,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot20,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot21 = CreateWindowEx(0,"BUTTON","10" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,203, 348,31, 27,hWnd,(HMENU)btn21,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot21,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot„o
-HWND bot22 = CreateWindowEx(0,"BUTTON","15" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,203, 381,31, 27,hWnd,(HMENU)btn22,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot22,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot„o
-HWND bot23 = CreateWindowEx(0,"BUTTON","20" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,240, 315,31, 27,hWnd,(HMENU)btn23,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot23,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot24 = CreateWindowEx(0,"BUTTON","25" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,240, 348,31, 27,hWnd,(HMENU)btn24,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot24,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot25 = CreateWindowEx(0,"BUTTON","30" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,240, 381,31, 27,hWnd,(HMENU)btn25,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot25,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot26 = CreateWindowEx(0,"BUTTON","F·cil"  ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,284, 315,70, 27,hWnd,(HMENU)btn26,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot26,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot27 = CreateWindowEx(0,"BUTTON","Normal" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,284, 348,70, 27,hWnd,(HMENU)btn27,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot27,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot28 = CreateWindowEx(0,"BUTTON","Dificil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,284, 381,70, 27,hWnd,(HMENU)btn28,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot28,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot29 = CreateWindowEx(0,"BUTTON","5" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,387, 315,31, 27,hWnd,(HMENU)btn29,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot29,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot30 = CreateWindowEx(0,"BUTTON","10" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,387, 348,31, 27,hWnd,(HMENU)btn30,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot30,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot31 = CreateWindowEx(0,"BUTTON","15" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,387, 381,31, 27,hWnd,(HMENU)btn31,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot31,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot32 = CreateWindowEx(0,"BUTTON","20" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,425, 315,31, 27,hWnd,(HMENU)btn32,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot32,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot33 = CreateWindowEx(0,"BUTTON","25" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,425, 348,31, 27,hWnd,(HMENU)btn33,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot33,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot34 = CreateWindowEx(0,"BUTTON","30" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,425, 381,31, 27,hWnd,(HMENU)btn34,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot34,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot„o
-HWND bot35 = CreateWindowEx(0,"BUTTON","F·cil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,469, 315,70, 27,hWnd,(HMENU)btn35,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot35,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot36 = CreateWindowEx(0,"BUTTON","Normal" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,469, 348,70, 27,hWnd,(HMENU)btn36,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot36,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
-HWND bot37 = CreateWindowEx(0,"BUTTON","Dificil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,469, 381,70, 27,hWnd,(HMENU)btn37,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot37,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
+//HWND bot14 = CreateWindowEx(0,"BUTTON","20" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,57, 315,31, 27,hWnd,(HMENU)btn14,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot14,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+//HWND bot15 = CreateWindowEx(0,"BUTTON","25" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,57, 348,31, 27,hWnd,(HMENU)btn15,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot15,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot√£o
+//HWND bot16 = CreateWindowEx(0,"BUTTON","30" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,57, 381,31, 27,hWnd,(HMENU)btn16,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot16,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+//HWND bot17 = CreateWindowEx(0,"BUTTON","Facil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,101, 315,70, 27,hWnd,(HMENU)btn17,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot17,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+//HWND bot18 = CreateWindowEx(0,"BUTTON","Normal" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,101, 348,70, 27,hWnd,(HMENU)btn18,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot18,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot√£o
+//HWND bot19 = CreateWindowEx(0,"BUTTON","Dificil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,101, 381,70, 27,hWnd,(HMENU)btn19,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot19,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot20 = CreateWindowEx(0,"BUTTON","5" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,203, 315,31, 27,hWnd,(HMENU)btn20,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot20,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot21 = CreateWindowEx(0,"BUTTON","10" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,203, 348,31, 27,hWnd,(HMENU)btn21,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot21,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot√£o
+HWND bot22 = CreateWindowEx(0,"BUTTON","15" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,203, 381,31, 27,hWnd,(HMENU)btn22,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot22,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot√£o
+HWND bot23 = CreateWindowEx(0,"BUTTON","20" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,240, 315,31, 27,hWnd,(HMENU)btn23,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot23,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot24 = CreateWindowEx(0,"BUTTON","25" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,240, 348,31, 27,hWnd,(HMENU)btn24,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot24,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot25 = CreateWindowEx(0,"BUTTON","30" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,240, 381,31, 27,hWnd,(HMENU)btn25,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot25,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot26 = CreateWindowEx(0,"BUTTON","F√°cil"  ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,284, 315,70, 27,hWnd,(HMENU)btn26,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot26,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot27 = CreateWindowEx(0,"BUTTON","Normal" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,284, 348,70, 27,hWnd,(HMENU)btn27,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot27,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot28 = CreateWindowEx(0,"BUTTON","Dificil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,284, 381,70, 27,hWnd,(HMENU)btn28,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot28,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot29 = CreateWindowEx(0,"BUTTON","5" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,387, 315,31, 27,hWnd,(HMENU)btn29,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot29,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot30 = CreateWindowEx(0,"BUTTON","10" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,387, 348,31, 27,hWnd,(HMENU)btn30,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot30,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot31 = CreateWindowEx(0,"BUTTON","15" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,387, 381,31, 27,hWnd,(HMENU)btn31,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot31,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot32 = CreateWindowEx(0,"BUTTON","20" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,425, 315,31, 27,hWnd,(HMENU)btn32,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot32,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot33 = CreateWindowEx(0,"BUTTON","25" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,425, 348,31, 27,hWnd,(HMENU)btn33,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot33,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot34 = CreateWindowEx(0,"BUTTON","30" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,425, 381,31, 27,hWnd,(HMENU)btn34,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot34,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0));//Cria bot√£o
+HWND bot35 = CreateWindowEx(0,"BUTTON","F√°cil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,469, 315,70, 27,hWnd,(HMENU)btn35,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot35,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot36 = CreateWindowEx(0,"BUTTON","Normal" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,469, 348,70, 27,hWnd,(HMENU)btn36,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot36,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
+HWND bot37 = CreateWindowEx(0,"BUTTON","Dificil" ,WS_CHILD|WS_VISIBLE|BS_DEFPUSHBUTTON,469, 381,70, 27,hWnd,(HMENU)btn37,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(bot37,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
 
 
-HWND combo1 = CreateWindowEx(0,"COMBOBOX","",WS_CHILD|WS_VISIBLE|CBS_DROPDOWNLIST,440,200,100,400,hWnd,(HMENU)comb1,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(combo1,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot„o
+HWND combo1 = CreateWindowEx(0,"COMBOBOX","",WS_CHILD|WS_VISIBLE|CBS_DROPDOWNLIST,440,200,100,400,hWnd,(HMENU)comb1,GetModuleHandle(NULL),NULL); hfDefault=GetStockObject(DEFAULT_GUI_FONT);SendMessage(combo1,WM_SETFONT,(WPARAM)hfDefault,MAKELPARAM(FALSE,0)); //Cria bot√£o
 SendMessage(combo1,
          (UINT)CB_ADDSTRING,
             (WPARAM)0,(LPARAM)TEXT("Offsets Pes 1 by fja"));
@@ -367,7 +367,7 @@ SendMessage(combo1,
              	// Criar Button3
 			HWND hWndButton3=CreateWindowEx(NULL,
 				"BUTTON",
-				"M·xima",
+				"M√°xima",
 				WS_TABSTOP|WS_VISIBLE|
 				WS_CHILD|BS_DEFPUSHBUTTON,
 				20,
@@ -517,8 +517,8 @@ SendMessage(combo1,
 				MAKELPARAM(FALSE,0));
 
             //####################################################################################################
-             // desabilitar todos os botıes
-             AlterarEstadoBotoes(hWnd, botoesParaAlterar, numeroDeBotoesParaAlterar, false); // Desabilitar todos os botıes
+             // desabilitar todos os bot√µes
+             AlterarEstadoBotoes(hWnd, botoesParaAlterar, numeroDeBotoesParaAlterar, false); // Desabilitar todos os bot√µes
 
 		}
 		break;
@@ -530,8 +530,8 @@ SendMessage(combo1,
 				{
               loadbox();
 
-                   // habilitar todos os botıes
-                  AlterarEstadoBotoes(hWnd, botoesParaAlterar, numeroDeBotoesParaAlterar, true); // Habilitar todos os botıes
+                   // habilitar todos os bot√µes
+                  AlterarEstadoBotoes(hWnd, botoesParaAlterar, numeroDeBotoesParaAlterar, true); // Habilitar todos os bot√µes
                   //  MessageBox(NULL, szFileName, "INFO", MB_OK | MB_ICONINFORMATION );
 				}
 				break;
